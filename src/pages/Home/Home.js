@@ -3,7 +3,11 @@ import css from './Home.module.scss';
 
 function Home() {
   const [productInfo, setProductInfo] = useState([]);
-  //   console.log(productInfo);
+  const productLists = productInfo.productList;
+  // console.log(productLists);
+  // console.log(productInfo);
+  // console.log(productLists[0].productName);
+
   useEffect(() => {
     fetch('https://cdn.ggumim.co.kr/test/image_product_link.json', {
       method: 'GET',
@@ -21,8 +25,6 @@ function Home() {
   const [search05, setSearch05] = useState(false);
   const [search06, setSearch06] = useState(false);
   const [search07, setSearch07] = useState(false);
-  const [search08, setSearch08] = useState(false);
-  const [search09, setSearch09] = useState(false);
 
   const handleSearch01 = () => {
     setSearch01(!search01);
@@ -44,12 +46,6 @@ function Home() {
   };
   const handleSearch07 = () => {
     setSearch07(!search07);
-  };
-  const handleSearch08 = () => {
-    setSearch08(!search08);
-  };
-  const handleSearch09 = () => {
-    setSearch09(!search09);
   };
 
   const searchIcon = '//cdn.ggumim.co.kr/storage/20211029145238AlZrQ41xtg.png';
@@ -78,73 +74,260 @@ function Home() {
             src={productInfo.imageUrl}
             alt="메인 이미지"
           />
-          <div className={css.tag_1} onClick={handleSearch01}>
+          <div className={css.tagRug} onClick={handleSearch01}>
             {!search01 ? (
-              <img src={searchIcon} alt="러그" />
+              <img src={searchIcon} alt="러그찾기" />
             ) : (
-              <img src={XIcon} alt="러그" />
+              <div>
+                <img src={XIcon} alt="러그취소" />
+                <img
+                  src="https://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png"
+                  alt="세모"
+                />
+                <span className={css.toolTip}>
+                  <img
+                    src="https://cdn.ggumim.co.kr/cache/furniture/300/20200916133257f6yBWCxVRR.jpg"
+                    alt="테이블"
+                  />
+                  <div className={css.desc}>
+                    <span>플로윙 화이트 원형 테이블</span>
+                    <div className={css.price}>
+                      <div className={css.discount}>
+                        <span>38%</span>
+                        74,000
+                      </div>
+                    </div>
+                  </div>
+                  <div className={css.moveIcon}>
+                    <img
+                      src="https://cdn.ggumim.co.kr/storage/20211102181936xqHzyWAmb8.png"
+                      alt="이동아이콘"
+                    />
+                  </div>
+                </span>
+              </div>
             )}
           </div>
-          <div className={css.tag_2} onClick={handleSearch02}>
+          <div className={css.tagTable} onClick={handleSearch02}>
             {!search02 ? (
               <img src={searchIcon} alt="테이블" />
             ) : (
-              <img src={XIcon} alt="테이블" />
+              <div>
+                <img src={XIcon} alt="테이블" />
+                <img
+                  src="https://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png"
+                  alt="세모"
+                />
+                <span className={css.toolTip}>
+                  <img
+                    src="https://cdn.ggumim.co.kr/cache/furniture/300/20200916133257f6yBWCxVRR.jpg"
+                    alt="테이블"
+                  />
+                  <div className={css.desc}>
+                    <span>플로윙 화이트 원형 테이블</span>
+                    <div className={css.price}>
+                      <div className={css.discount}>
+                        <span>38%</span>
+                        74,000
+                      </div>
+                    </div>
+                  </div>
+                  <div className={css.moveIcon}>
+                    <img
+                      src="https://cdn.ggumim.co.kr/storage/20211102181936xqHzyWAmb8.png"
+                      alt="이동아이콘"
+                    />
+                  </div>
+                </span>
+              </div>
             )}
           </div>
-          <div className={css.tag_3} onClick={handleSearch03}>
+          <div className={css.tagFireplace} onClick={handleSearch03}>
             {!search03 ? (
               <img src={searchIcon} alt="벽난로" />
             ) : (
-              <img src={XIcon} alt="벽난로" />
+              <div>
+                <img src={XIcon} alt="벽난로" />
+                <img
+                  src="https://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png"
+                  alt="세모"
+                />
+                <span className={css.toolTip}>
+                  <img
+                    src="https://cdn.ggumim.co.kr/cache/furniture/300/20200916133257f6yBWCxVRR.jpg"
+                    alt="테이블"
+                  />
+                  <div className={css.desc}>
+                    <span>플로윙 화이트 원형 테이블</span>
+                    <div className={css.price}>
+                      <div className={css.discount}>
+                        <span>38%</span>
+                        74,000
+                      </div>
+                    </div>
+                  </div>
+                  <div className={css.moveIcon}>
+                    <img
+                      src="https://cdn.ggumim.co.kr/storage/20211102181936xqHzyWAmb8.png"
+                      alt="이동아이콘"
+                    />
+                  </div>
+                </span>
+              </div>
             )}
           </div>
-          <div className={css.tag_4} onClick={handleSearch04}>
+          <div className={css.tagCurtain} onClick={handleSearch04}>
             {!search04 ? (
               <img src={searchIcon} alt="자수 레이스 커튼" />
             ) : (
-              <img src={XIcon} alt="자수 레이스 커튼" />
+              <div>
+                <img src={XIcon} alt="자수 레이스 커튼" />
+                <img
+                  src="https://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png"
+                  alt="세모"
+                />
+                <span className={css.toolTip}>
+                  <img
+                    src="https://cdn.ggumim.co.kr/cache/furniture/300/20200916133257f6yBWCxVRR.jpg"
+                    alt="테이블"
+                  />
+                  <div className={css.desc}>
+                    <span>플로윙 화이트 원형 테이블</span>
+                    <div className={css.price}>
+                      <div className={css.discount}>
+                        <span>38%</span>
+                        74,000
+                      </div>
+                    </div>
+                  </div>
+                  <div className={css.moveIcon}>
+                    <img
+                      src="https://cdn.ggumim.co.kr/storage/20211102181936xqHzyWAmb8.png"
+                      alt="이동아이콘"
+                    />
+                  </div>
+                </span>
+              </div>
             )}
           </div>
-          <div className={css.tag_5} onClick={handleSearch05}>
+          <div className={css.tagLamp} onClick={handleSearch05}>
             {!search05 ? (
               <img src={searchIcon} alt="스탠드 조명" />
             ) : (
-              <img src={XIcon} alt="스탠드 조명" />
+              <div>
+                <img src={XIcon} alt="스탠드 조명" />
+                <img
+                  src="https://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png"
+                  alt="세모"
+                />
+                <span className={css.toolTip}>
+                  <img
+                    src="https://cdn.ggumim.co.kr/cache/furniture/300/20200916133257f6yBWCxVRR.jpg"
+                    alt="테이블"
+                  />
+                  <div className={css.desc}>
+                    <span>플로윙 화이트 원형 테이블</span>
+                    <div className={css.price}>
+                      <div className={css.discount}>
+                        <span>38%</span>
+                        74,000
+                      </div>
+                    </div>
+                  </div>
+                  <div className={css.moveIcon}>
+                    <img
+                      src="https://cdn.ggumim.co.kr/storage/20211102181936xqHzyWAmb8.png"
+                      alt="이동아이콘"
+                    />
+                  </div>
+                </span>
+              </div>
             )}
           </div>
-          <div className={css.tag_6} onClick={handleSearch06}>
+          <div className={css.tagTrolley} onClick={handleSearch06}>
             {!search06 ? (
-              <img src={searchIcon} alt="쉬폰 커튼" />
-            ) : (
-              <img src={XIcon} alt="쉬폰 커튼" />
-            )}
-          </div>
-          <div className={css.tag_7} onClick={handleSearch07}>
-            {!search07 ? (
-              <img src={searchIcon} alt="의자" />
-            ) : (
-              <img src={XIcon} alt="의자" />
-            )}
-          </div>
-          <div className={css.tag_8} onClick={handleSearch08}>
-            {!search08 ? (
               <img src={searchIcon} alt="이동식 선반" />
             ) : (
-              <img src={XIcon} alt="이동식 선반" />
+              <div>
+                <img src={XIcon} alt="이동식 선반" />
+                <img
+                  src="https://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png"
+                  alt="세모"
+                />
+                <span className={css.toolTip}>
+                  <img
+                    src="https://cdn.ggumim.co.kr/cache/furniture/300/20200916133257f6yBWCxVRR.jpg"
+                    alt="테이블"
+                  />
+                  <div className={css.desc}>
+                    <span>플로윙 화이트 원형 테이블</span>
+                    <div className={css.price}>
+                      <div className={css.discount}>
+                        <span>38%</span>
+                        74,000
+                      </div>
+                    </div>
+                  </div>
+                  <div className={css.moveIcon}>
+                    <img
+                      src="https://cdn.ggumim.co.kr/storage/20211102181936xqHzyWAmb8.png"
+                      alt="이동아이콘"
+                    />
+                  </div>
+                </span>
+              </div>
             )}
           </div>
-          <div className={css.tag_9} onClick={handleSearch09}>
-            {!search09 ? (
+          <div className={css.tagMobile} onClick={handleSearch07}>
+            {!search07 ? (
               <img src={searchIcon} alt="모빌" />
             ) : (
-              <img src={XIcon} alt="모빌" />
+              <div>
+                <img src={XIcon} alt="모빌" />
+                <img
+                  src="https://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png"
+                  alt="세모"
+                />
+                <span className={css.toolTip}>
+                  <img
+                    src="https://cdn.ggumim.co.kr/cache/furniture/300/20200916133257f6yBWCxVRR.jpg"
+                    alt="테이블"
+                  />
+                  <div className={css.desc}>
+                    <span>플로윙 화이트 원형 테이블</span>
+                    <div className={css.price}>
+                      <div className={css.discount}>
+                        <span>38%</span>
+                        74,000
+                      </div>
+                    </div>
+                  </div>
+                  <div className={css.moveIcon}>
+                    <img
+                      src="https://cdn.ggumim.co.kr/storage/20211102181936xqHzyWAmb8.png"
+                      alt="이동아이콘"
+                    />
+                  </div>
+                </span>
+              </div>
             )}
           </div>
         </figure>
 
         <div className={css.wrapVertical}>
-          <div className={css.subPicture}>
+          {productLists?.map(productLists => {
+            return (
+              <div className={css.subPicture} key={productLists.productId}>
+                <img
+                  className={css.subImage}
+                  src={productLists.imageUrl}
+                  alt={productLists.productName}
+                />
+              </div>
+            );
+          })}
+
+          {/* <div className={css.subPicture}>
             <img
               className={css.subImage}
               src="https://cdn.ggumim.co.kr/cache/furniture/300/202106251732335MqWBmo5tQ.jpg"
@@ -206,7 +389,7 @@ function Home() {
               src="https://cdn.ggumim.co.kr/cache/furniture/300/20220110174102naCtctXTxY.png"
               alt="러그"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
