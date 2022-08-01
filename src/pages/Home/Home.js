@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import css from './Home.module.scss';
 
 function Home() {
+  const [productInfo, setProductInfo] = useState([]);
+  //   console.log(productInfo);
+  useEffect(() => {
+    fetch('https://cdn.ggumim.co.kr/test/image_product_link.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        setProductInfo(data);
+      });
+  }, [setProductInfo]);
+
   return (
     <div className={css.container}>
       <header>
         <h2>2022.01.12 17:55</h2>
-        {/* <div>화이트, 우드, 라탄! 세 가지 컨셉으로 꾸민 내 방</div> */}
         <h1>화이트, 우드, 라탄! 세 가지 컨셉으로 꾸민 내 방</h1>
         <div className={css.hashTag}>
           #방꾸미기 &nbsp; &nbsp; #우드톤 &nbsp; &nbsp; #화이트 &nbsp; &nbsp;
@@ -23,10 +34,11 @@ function Home() {
         <figure className={css.picture}>
           <img
             className={css.mainImage}
-            src="https://cdn.ggumim.co.kr/cache/star/1000/2022011017094316oRcWeb8R.jpeg"
-            alt="이미지 대체 텍스트"
+            src={productInfo.imageUrl}
+            alt="메인 이미지"
           />
         </figure>
+
         <div className={css.wrapVertical}>
           <div className={css.subPicture}>
             <img
