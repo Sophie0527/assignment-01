@@ -14,6 +14,47 @@ function Home() {
       });
   }, [setProductInfo]);
 
+  const [search01, setSearch01] = useState(false);
+  const [search02, setSearch02] = useState(false);
+  const [search03, setSearch03] = useState(false);
+  const [search04, setSearch04] = useState(false);
+  const [search05, setSearch05] = useState(false);
+  const [search06, setSearch06] = useState(false);
+  const [search07, setSearch07] = useState(false);
+  const [search08, setSearch08] = useState(false);
+  const [search09, setSearch09] = useState(false);
+
+  const handleSearch01 = () => {
+    setSearch01(!search01);
+  };
+  const handleSearch02 = () => {
+    setSearch02(!search02);
+  };
+  const handleSearch03 = () => {
+    setSearch03(!search03);
+  };
+  const handleSearch04 = () => {
+    setSearch04(!search04);
+  };
+  const handleSearch05 = () => {
+    setSearch05(!search05);
+  };
+  const handleSearch06 = () => {
+    setSearch06(!search06);
+  };
+  const handleSearch07 = () => {
+    setSearch07(!search07);
+  };
+  const handleSearch08 = () => {
+    setSearch08(!search08);
+  };
+  const handleSearch09 = () => {
+    setSearch09(!search09);
+  };
+
+  const searchIcon = '//cdn.ggumim.co.kr/storage/20211029145238AlZrQ41xtg.png';
+  const XIcon = '//cdn.ggumim.co.kr/storage/20211029145330GwwumnWNSs.png';
+
   return (
     <div className={css.container}>
       <header>
@@ -37,6 +78,69 @@ function Home() {
             src={productInfo.imageUrl}
             alt="메인 이미지"
           />
+          <div className={css.tag_1} onClick={handleSearch01}>
+            {!search01 ? (
+              <img src={searchIcon} alt="러그" />
+            ) : (
+              <img src={XIcon} alt="러그" />
+            )}
+          </div>
+          <div className={css.tag_2} onClick={handleSearch02}>
+            {!search02 ? (
+              <img src={searchIcon} alt="테이블" />
+            ) : (
+              <img src={XIcon} alt="테이블" />
+            )}
+          </div>
+          <div className={css.tag_3} onClick={handleSearch03}>
+            {!search03 ? (
+              <img src={searchIcon} alt="벽난로" />
+            ) : (
+              <img src={XIcon} alt="벽난로" />
+            )}
+          </div>
+          <div className={css.tag_4} onClick={handleSearch04}>
+            {!search04 ? (
+              <img src={searchIcon} alt="자수 레이스 커튼" />
+            ) : (
+              <img src={XIcon} alt="자수 레이스 커튼" />
+            )}
+          </div>
+          <div className={css.tag_5} onClick={handleSearch05}>
+            {!search05 ? (
+              <img src={searchIcon} alt="스탠드 조명" />
+            ) : (
+              <img src={XIcon} alt="스탠드 조명" />
+            )}
+          </div>
+          <div className={css.tag_6} onClick={handleSearch06}>
+            {!search06 ? (
+              <img src={searchIcon} alt="쉬폰 커튼" />
+            ) : (
+              <img src={XIcon} alt="쉬폰 커튼" />
+            )}
+          </div>
+          <div className={css.tag_7} onClick={handleSearch07}>
+            {!search07 ? (
+              <img src={searchIcon} alt="의자" />
+            ) : (
+              <img src={XIcon} alt="의자" />
+            )}
+          </div>
+          <div className={css.tag_8} onClick={handleSearch08}>
+            {!search08 ? (
+              <img src={searchIcon} alt="이동식 선반" />
+            ) : (
+              <img src={XIcon} alt="이동식 선반" />
+            )}
+          </div>
+          <div className={css.tag_9} onClick={handleSearch09}>
+            {!search09 ? (
+              <img src={searchIcon} alt="모빌" />
+            ) : (
+              <img src={XIcon} alt="모빌" />
+            )}
+          </div>
         </figure>
 
         <div className={css.wrapVertical}>

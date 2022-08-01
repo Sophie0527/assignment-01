@@ -5,6 +5,18 @@
   margin-right: auto;
 }
 
+@mixin search {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+  text-align: center;
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
 .container {
   padding: 110px 0 0 0;
 
@@ -55,6 +67,51 @@
         display: inline-block;
         width: 800px;
         cursor: pointer;
+      }
+      .tag_1 {
+        top: 777.6px;
+        left: 327.267px;
+        @include search;
+      }
+      .tag_2 {
+        top: 510.4px;
+        left: 284.067px;
+        @include search;
+      }
+      .tag_3 {
+        top: 460.8px;
+        left: 154.467px;
+        @include search;
+      }
+      .tag_4 {
+        top: 240px;
+        left: 333.667px;
+        @include search;
+      }
+      .tag_5 {
+        top: 328px;
+        left: 720.867px;
+        @include search;
+      }
+      .tag_6 {
+        top: 308.8px;
+        left: 474.467px;
+        @include search;
+      }
+      .tag_7 {
+        top: 558.4px;
+        left: 156.067px;
+        @include search;
+      }
+      .tag_8 {
+        top: 564.8px;
+        left: 444.034px;
+        @include search;
+      }
+      .tag_9 {
+        top: 275.2px;
+        left: 199.267px;
+        @include search;
       }
     }
     .wrapVertical {
