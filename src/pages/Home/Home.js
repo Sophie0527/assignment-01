@@ -16,7 +16,7 @@ function Home() {
       .then(data => {
         setProductInfo(data);
       });
-  }, [setProductInfo]);
+  }, [setProductInfo, productLists]);
 
   const [search01, setSearch01] = useState(false);
   const [search02, setSearch02] = useState(false);
@@ -28,28 +28,89 @@ function Home() {
 
   const handleSearch01 = () => {
     setSearch01(!search01);
+    if (search01 === true || search01 === false) {
+      setSearch02(false);
+      setSearch03(false);
+      setSearch04(false);
+      setSearch05(false);
+      setSearch06(false);
+      setSearch07(false);
+    }
   };
+
   const handleSearch02 = () => {
     setSearch02(!search02);
+    if (search02 === true || search02 === false) {
+      setSearch01(false);
+      setSearch03(false);
+      setSearch04(false);
+      setSearch05(false);
+      setSearch06(false);
+      setSearch07(false);
+    }
   };
   const handleSearch03 = () => {
     setSearch03(!search03);
+    if (search03 === true || search03 === false) {
+      setSearch01(false);
+      setSearch02(false);
+      setSearch04(false);
+      setSearch05(false);
+      setSearch06(false);
+      setSearch07(false);
+    }
   };
   const handleSearch04 = () => {
     setSearch04(!search04);
+    if (search04 === true || search04 === false) {
+      setSearch01(false);
+      setSearch02(false);
+      setSearch03(false);
+      setSearch05(false);
+      setSearch06(false);
+      setSearch07(false);
+    }
   };
   const handleSearch05 = () => {
     setSearch05(!search05);
+    if (search05 === true || search05 === false) {
+      setSearch01(false);
+      setSearch02(false);
+      setSearch03(false);
+      setSearch04(false);
+      setSearch06(false);
+      setSearch07(false);
+    }
   };
   const handleSearch06 = () => {
     setSearch06(!search06);
+    if (search06 === true || search06 === false) {
+      setSearch01(false);
+      setSearch02(false);
+      setSearch03(false);
+      setSearch04(false);
+      setSearch05(false);
+      setSearch07(false);
+    }
   };
   const handleSearch07 = () => {
     setSearch07(!search07);
+    if (search07 === true || search07 === false) {
+      setSearch01(false);
+      setSearch02(false);
+      setSearch03(false);
+      setSearch04(false);
+      setSearch05(false);
+      setSearch06(false);
+    }
   };
 
   const searchIcon = '//cdn.ggumim.co.kr/storage/20211029145238AlZrQ41xtg.png';
   const XIcon = '//cdn.ggumim.co.kr/storage/20211029145330GwwumnWNSs.png';
+  const triangleIcon =
+    'https://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png';
+  const moveIcon =
+    'https://cdn.ggumim.co.kr/storage/20211102181936xqHzyWAmb8.png';
 
   return (
     <div className={css.container}>
@@ -67,6 +128,7 @@ function Home() {
           <span>0</span>
         </div>
       </header>
+
       <div className={css.viewContent}>
         <figure className={css.picture}>
           <img
@@ -74,239 +136,239 @@ function Home() {
             src={productInfo.imageUrl}
             alt="메인 이미지"
           />
+
+          {/* 애틱 타일 이지케어 발수러그 */}
           <div className={css.tagRug} onClick={handleSearch01}>
             {!search01 ? (
-              <img src={searchIcon} alt="러그찾기" />
+              <img src={searchIcon} alt="돋보기아이콘" />
             ) : (
               <div>
-                <img src={XIcon} alt="러그취소" />
-                <img
-                  src="https://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png"
-                  alt="세모"
-                />
+                <img src={XIcon} alt="취소아이콘" />
+                <img src={triangleIcon} alt="세모아이콘" />
                 <span className={css.toolTip}>
                   <img
-                    src="https://cdn.ggumim.co.kr/cache/furniture/300/20200916133257f6yBWCxVRR.jpg"
-                    alt="테이블"
+                    src={productLists[0].imageUrl}
+                    alt={productLists[0].productName}
                   />
                   <div className={css.desc}>
-                    <span>플로윙 화이트 원형 테이블</span>
+                    <span>{productLists[0].productName}</span>
                     <div className={css.price}>
                       <div className={css.discount}>
-                        <span>38%</span>
-                        74,000
+                        {productLists[0].outside === true ? (
+                          <div className={css.estimatedPrice}>예상가</div>
+                        ) : (
+                          <span>{productLists[0].discountRate}%</span>
+                        )}
+                        {productLists[0].priceDiscount}
                       </div>
                     </div>
                   </div>
                   <div className={css.moveIcon}>
-                    <img
-                      src="https://cdn.ggumim.co.kr/storage/20211102181936xqHzyWAmb8.png"
-                      alt="이동아이콘"
-                    />
+                    <img src={moveIcon} alt="이동아이콘" />
                   </div>
                 </span>
               </div>
             )}
           </div>
+
+          {/* 플로윙 화이트 원형 테이블 */}
           <div className={css.tagTable} onClick={handleSearch02}>
             {!search02 ? (
-              <img src={searchIcon} alt="테이블" />
+              <img src={searchIcon} alt="돋보기아이콘" />
             ) : (
-              <div>
-                <img src={XIcon} alt="테이블" />
-                <img
-                  src="https://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png"
-                  alt="세모"
-                />
+              <div className={css.select}>
+                <img src={XIcon} alt="취소아이콘" />
+                <img src={triangleIcon} alt="세모아이콘" />
                 <span className={css.toolTip}>
                   <img
-                    src="https://cdn.ggumim.co.kr/cache/furniture/300/20200916133257f6yBWCxVRR.jpg"
-                    alt="테이블"
+                    src={productLists[1].imageUrl}
+                    alt={productLists[1].productName}
                   />
                   <div className={css.desc}>
-                    <span>플로윙 화이트 원형 테이블</span>
+                    <span>{productLists[1].productName}</span>
                     <div className={css.price}>
                       <div className={css.discount}>
-                        <span>38%</span>
-                        74,000
+                        {productLists[1].outside === true ? (
+                          <div className={css.estimatedPrice}>예상가</div>
+                        ) : (
+                          <span>{productLists[1].discountRate}%</span>
+                        )}
+                        {productLists[1].priceDiscount}
                       </div>
                     </div>
                   </div>
                   <div className={css.moveIcon}>
-                    <img
-                      src="https://cdn.ggumim.co.kr/storage/20211102181936xqHzyWAmb8.png"
-                      alt="이동아이콘"
-                    />
+                    <img src={moveIcon} alt="이동아이콘" />
                   </div>
                 </span>
               </div>
             )}
           </div>
+
+          {/* 트리니 벽난로콘솔 */}
           <div className={css.tagFireplace} onClick={handleSearch03}>
             {!search03 ? (
-              <img src={searchIcon} alt="벽난로" />
+              <img src={searchIcon} alt="돋보기아이콘" />
             ) : (
               <div>
-                <img src={XIcon} alt="벽난로" />
-                <img
-                  src="https://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png"
-                  alt="세모"
-                />
+                <img src={XIcon} alt="취소아이콘" />
+                <img src={triangleIcon} alt="세모아이콘" />
                 <span className={css.toolTip}>
                   <img
-                    src="https://cdn.ggumim.co.kr/cache/furniture/300/20200916133257f6yBWCxVRR.jpg"
-                    alt="테이블"
+                    src={productLists[2].imageUrl}
+                    alt={productLists[2].productName}
                   />
                   <div className={css.desc}>
-                    <span>플로윙 화이트 원형 테이블</span>
+                    <span>{productLists[2].productName}</span>
                     <div className={css.price}>
                       <div className={css.discount}>
-                        <span>38%</span>
-                        74,000
+                        {productLists[2].outside === true ? (
+                          <div className={css.estimatedPrice}>예상가</div>
+                        ) : (
+                          <span>{productLists[2].discountRate}%</span>
+                        )}
+                        {productLists[2].priceDiscount}
                       </div>
                     </div>
                   </div>
                   <div className={css.moveIcon}>
-                    <img
-                      src="https://cdn.ggumim.co.kr/storage/20211102181936xqHzyWAmb8.png"
-                      alt="이동아이콘"
-                    />
+                    <img src={moveIcon} alt="이동아이콘" />
                   </div>
                 </span>
               </div>
             )}
           </div>
+
+          {/* 루아 자수 레이스 커튼 */}
           <div className={css.tagCurtain} onClick={handleSearch04}>
             {!search04 ? (
-              <img src={searchIcon} alt="자수 레이스 커튼" />
+              <img src={searchIcon} alt="돋보기아이콘" />
             ) : (
               <div>
-                <img src={XIcon} alt="자수 레이스 커튼" />
-                <img
-                  src="https://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png"
-                  alt="세모"
-                />
+                <img src={XIcon} alt="취소아이콘" />
+                <img src={triangleIcon} alt="세모아이콘" />
                 <span className={css.toolTip}>
                   <img
-                    src="https://cdn.ggumim.co.kr/cache/furniture/300/20200916133257f6yBWCxVRR.jpg"
-                    alt="테이블"
+                    src={productLists[3].imageUrl}
+                    alt={productLists[3].productName}
                   />
                   <div className={css.desc}>
-                    <span>플로윙 화이트 원형 테이블</span>
+                    <span>{productLists[3].productName}</span>
                     <div className={css.price}>
                       <div className={css.discount}>
-                        <span>38%</span>
-                        74,000
+                        {productLists[3].outside === true ? (
+                          <div className={css.estimatedPrice}>예상가</div>
+                        ) : (
+                          <span>{productLists[3].discountRate}%</span>
+                        )}
+                        {productLists[3].priceDiscount}
                       </div>
                     </div>
                   </div>
                   <div className={css.moveIcon}>
-                    <img
-                      src="https://cdn.ggumim.co.kr/storage/20211102181936xqHzyWAmb8.png"
-                      alt="이동아이콘"
-                    />
+                    <img src={moveIcon} alt="이동아이콘" />
                   </div>
                 </span>
               </div>
             )}
           </div>
+
+          {/* TÄLLBYN 텔뷘 */}
           <div className={css.tagLamp} onClick={handleSearch05}>
             {!search05 ? (
-              <img src={searchIcon} alt="스탠드 조명" />
+              <img src={searchIcon} alt="돋보기아이콘" />
             ) : (
               <div>
-                <img src={XIcon} alt="스탠드 조명" />
-                <img
-                  src="https://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png"
-                  alt="세모"
-                />
+                <img src={XIcon} alt="취소아이콘" />
+                <img src={triangleIcon} alt="세모아이콘" />
                 <span className={css.toolTip}>
                   <img
-                    src="https://cdn.ggumim.co.kr/cache/furniture/300/20200916133257f6yBWCxVRR.jpg"
-                    alt="테이블"
+                    src={productLists[4].imageUrl}
+                    alt={productLists[4].productName}
                   />
                   <div className={css.desc}>
-                    <span>플로윙 화이트 원형 테이블</span>
+                    <span>{productLists[4].productName}</span>
                     <div className={css.price}>
                       <div className={css.discount}>
-                        <span>38%</span>
-                        74,000
+                        {productLists[4].outside === true ? (
+                          <div className={css.estimatedPrice}>예상가</div>
+                        ) : (
+                          <span>{productLists[4].discountRate}%</span>
+                        )}
+                        {productLists[4].priceDiscount}
                       </div>
                     </div>
                   </div>
                   <div className={css.moveIcon}>
-                    <img
-                      src="https://cdn.ggumim.co.kr/storage/20211102181936xqHzyWAmb8.png"
-                      alt="이동아이콘"
-                    />
+                    <img src={moveIcon} alt="이동아이콘" />
                   </div>
                 </span>
               </div>
             )}
           </div>
+
+          {/* GRUET 사이드테이블/트롤리 시리즈 */}
           <div className={css.tagTrolley} onClick={handleSearch06}>
             {!search06 ? (
-              <img src={searchIcon} alt="이동식 선반" />
+              <img src={searchIcon} alt="돋보기아이콘" />
             ) : (
               <div>
-                <img src={XIcon} alt="이동식 선반" />
-                <img
-                  src="https://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png"
-                  alt="세모"
-                />
+                <img src={XIcon} alt="취소아이콘" />
+                <img src={triangleIcon} alt="세모아이콘" />
                 <span className={css.toolTip}>
                   <img
-                    src="https://cdn.ggumim.co.kr/cache/furniture/300/20200916133257f6yBWCxVRR.jpg"
-                    alt="테이블"
+                    src={productLists[5].imageUrl}
+                    alt={productLists[5].productName}
                   />
                   <div className={css.desc}>
-                    <span>플로윙 화이트 원형 테이블</span>
+                    <span>{productLists[5].productName}</span>
                     <div className={css.price}>
                       <div className={css.discount}>
-                        <span>38%</span>
-                        74,000
+                        {productLists[5].outside === true ? (
+                          <div className={css.estimatedPrice}>예상가</div>
+                        ) : (
+                          <span>{productLists[5].discountRate}%</span>
+                        )}
+                        {productLists[5].priceDiscount}
                       </div>
                     </div>
                   </div>
                   <div className={css.moveIcon}>
-                    <img
-                      src="https://cdn.ggumim.co.kr/storage/20211102181936xqHzyWAmb8.png"
-                      alt="이동아이콘"
-                    />
+                    <img src={moveIcon} alt="이동아이콘" />
                   </div>
                 </span>
               </div>
             )}
           </div>
+
+          {/* 마크라메 자개모빌 풍성형 */}
           <div className={css.tagMobile} onClick={handleSearch07}>
             {!search07 ? (
-              <img src={searchIcon} alt="모빌" />
+              <img src={searchIcon} alt="돋보기아이콘" />
             ) : (
               <div>
-                <img src={XIcon} alt="모빌" />
-                <img
-                  src="https://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png"
-                  alt="세모"
-                />
+                <img src={XIcon} alt="취소아이콘" />
+                <img src={triangleIcon} alt="세모아이콘" />
                 <span className={css.toolTip}>
                   <img
-                    src="https://cdn.ggumim.co.kr/cache/furniture/300/20200916133257f6yBWCxVRR.jpg"
-                    alt="테이블"
+                    src={productLists[6].imageUrl}
+                    alt={productLists[6].productName}
                   />
                   <div className={css.desc}>
-                    <span>플로윙 화이트 원형 테이블</span>
+                    <span>{productLists[6].productName}</span>
                     <div className={css.price}>
                       <div className={css.discount}>
-                        <span>38%</span>
-                        74,000
+                        {productLists[6].outside === true ? (
+                          <div className={css.estimatedPrice}>예상가</div>
+                        ) : (
+                          <span>{productLists[6].discountRate}%</span>
+                        )}
+                        {productLists[6].priceDiscount}
                       </div>
                     </div>
                   </div>
                   <div className={css.moveIcon}>
-                    <img
-                      src="https://cdn.ggumim.co.kr/storage/20211102181936xqHzyWAmb8.png"
-                      alt="이동아이콘"
-                    />
+                    <img src={moveIcon} alt="이동아이콘" />
                   </div>
                 </span>
               </div>
@@ -315,80 +377,198 @@ function Home() {
         </figure>
 
         <div className={css.wrapVertical}>
-          {productLists?.map(productLists => {
+          {/* {productLists?.map(productLists => {
             return (
-              <div className={css.subPicture} key={productLists.productId}>
-                <img
-                  className={css.subImage}
-                  src={productLists.imageUrl}
-                  alt={productLists.productName}
-                />
+              <div
+                className={css.subPicture}
+                key={productLists.productId}
+                onClick={handleSearch01}
+              >
+                <div
+                  className={!search01 ? css.subImageBox : css.subImageBoxPoint}
+                >
+                  <img
+                    className={css.subImage}
+                    src={productLists.imageUrl}
+                    alt={productLists.productName}
+                  />
+                  {productLists.discountRate !== 0 ? (
+                    <div className={css.discountIconBox}>
+                      <img
+                        className={css.discountIcon}
+                        src="//cdn.ggumim.co.kr/storage/20211117191419RW6JS6bjRm.png"
+                        alt="할인북마크아이콘"
+                      />
+                      <span className={css.discountPrice}>
+                        {productLists.discountRate}
+                        <span className={css.percent}>%</span>
+                      </span>
+                    </div>
+                  ) : null}
+                </div>
               </div>
             );
-          })}
+          })} */}
 
-          {/* <div className={css.subPicture}>
-            <img
-              className={css.subImage}
-              src="https://cdn.ggumim.co.kr/cache/furniture/300/202106251732335MqWBmo5tQ.jpg"
-              alt="모빌"
-            />
-          </div>
-          <div className={css.subPicture}>
-            <img
-              className={css.subImage}
-              src="https://cdn.ggumim.co.kr/cache/furniture/300/20200916133257f6yBWCxVRR.jpg"
-              alt="테이블"
-            />
-          </div>
-          <div className={css.subPicture}>
-            <img
-              className={css.subImage}
-              src="https://cdn.ggumim.co.kr/cache/furniture/300/2020041308532933wiLOaPrO.jpg"
-              alt="이동식 선반"
-            />
-          </div>
-          <div className={css.subPicture}>
-            <img
-              className={css.subImage}
-              src="https://cdn.ggumim.co.kr/cache/furniture/300/20220110174732fFP0woxpov.png"
-              alt="자수 레이스 커튼"
-            />
-          </div>
-          <div className={css.subPicture}>
-            <img
-              className={css.subImage}
-              src="https://cdn.ggumim.co.kr/cache/furniture/300/20220110175032Kovsqwpdkw.png"
-              alt="쉬폰 커튼"
-            />
-          </div>
-          <div className={css.subPicture}>
-            <img
-              className={css.subImage}
-              src="https://cdn.ggumim.co.kr/cache/furniture/300/202104021708586U3uKKEJqa.PNG"
-              alt="스탠드 조명"
-            />
-          </div>
-          <div className={css.subPicture}>
-            <img
-              className={css.subImage}
-              src="https://cdn.ggumim.co.kr/cache/furniture/300/202104291640198PeKIa8W06.JPG"
-              alt="벽난로"
-            />
-          </div>
-          <div className={css.subPicture}>
-            <img
-              className={css.subImage}
-              src="https://cdn.ggumim.co.kr/cache/furniture/300/20210705191444bnwLPTWxV0.jpg"
-              alt="의자"
-            />
-          </div>
-          <div className={css.subPicture}>
-            <img
-              className={css.subImage}
-              src="https://cdn.ggumim.co.kr/cache/furniture/300/20220110174102naCtctXTxY.png"
-              alt="러그"
-            />
+          {/* <div className={css.subPicture} onClick={handleSearch01}>
+            <div className={!search01 ? css.subImageBox : css.subImageBoxPoint}>
+              <img
+                className={css.subImage}
+                src={productLists[0].imageUrl}
+                alt={productLists[0].productName}
+              />
+              {productLists[0].discountRate !== 0 ? (
+                <div className={css.discountIconBox}>
+                  <img
+                    className={css.discountIcon}
+                    src="//cdn.ggumim.co.kr/storage/20211117191419RW6JS6bjRm.png"
+                    alt="할인북마크아이콘"
+                  />
+                  <span className={css.discountPrice}>
+                    {productLists[0].discountRate}
+                    <span className={css.percent}>%</span>
+                  </span>
+                </div>
+              ) : null}
+            </div>
+          </div> */}
+
+          {/* <div className={css.subPicture} onClick={handleSearch02}>
+            <div className={!search02 ? css.subImageBox : css.subImageBoxPoint}>
+              <img
+                className={css.subImage}
+                src={productLists[1].imageUrl}
+                alt={productLists[1].productName}
+              />
+              {productLists[1].discountRate !== 0 ? (
+                <div className={css.discountIconBox}>
+                  <img
+                    className={css.discountIcon}
+                    src="//cdn.ggumim.co.kr/storage/20211117191419RW6JS6bjRm.png"
+                    alt="할인북마크아이콘"
+                  />
+                  <span className={css.discountPrice}>
+                    {productLists[1].discountRate}
+                    <span className={css.percent}>%</span>
+                  </span>
+                </div>
+              ) : null}
+            </div>
+          </div> */}
+
+          {/* <div className={css.subPicture} onClick={handleSearch03}>
+            <div className={!search03 ? css.subImageBox : css.subImageBoxPoint}>
+              <img
+                className={css.subImage}
+                src={productLists[2].imageUrl}
+                alt={productLists[2].productName}
+              />
+              {productLists[2].discountRate !== 0 ? (
+                <div className={css.discountIconBox}>
+                  <img
+                    className={css.discountIcon}
+                    src="//cdn.ggumim.co.kr/storage/20211117191419RW6JS6bjRm.png"
+                    alt="할인북마크아이콘"
+                  />
+                  <span className={css.discountPrice}>
+                    {productLists[2].discountRate}
+                    <span className={css.percent}>%</span>
+                  </span>
+                </div>
+              ) : null}
+            </div>
+          </div> */}
+
+          {/* <div className={css.subPicture} onClick={handleSearch04}>
+            <div className={!search04 ? css.subImageBox : css.subImageBoxPoint}>
+              <img
+                className={css.subImage}
+                src={productLists[3].imageUrl}
+                alt={productLists[3].productName}
+              />
+              {productLists[3].discountRate !== 0 ? (
+                <div className={css.discountIconBox}>
+                  <img
+                    className={css.discountIcon}
+                    src="//cdn.ggumim.co.kr/storage/20211117191419RW6JS6bjRm.png"
+                    alt="할인북마크아이콘"
+                  />
+                  <span className={css.discountPrice}>
+                    {productLists[3].discountRate}
+                    <span className={css.percent}>%</span>
+                  </span>
+                </div>
+              ) : null}
+            </div>
+          </div> */}
+
+          {/* <div className={css.subPicture} onClick={handleSearch05}>
+            <div className={!search05 ? css.subImageBox : css.subImageBoxPoint}>
+              <img
+                className={css.subImage}
+                src={productLists[4].imageUrl}
+                alt={productLists[4].productName}
+              />
+              {productLists[4].discountRate !== 0 ? (
+                <div className={css.discountIconBox}>
+                  <img
+                    className={css.discountIcon}
+                    src="//cdn.ggumim.co.kr/storage/20211117191419RW6JS6bjRm.png"
+                    alt="할인북마크아이콘"
+                  />
+                  <span className={css.discountPrice}>
+                    {productLists[4].discountRate}
+                    <span className={css.percent}>%</span>
+                  </span>
+                </div>
+              ) : null}
+            </div>
+          </div> */}
+
+          {/* <div className={css.subPicture} onClick={handleSearch06}>
+            <div className={!search06 ? css.subImageBox : css.subImageBoxPoint}>
+              <img
+                className={css.subImage}
+                src={productLists[5].imageUrl}
+                alt={productLists[5].productName}
+              />
+              {productLists[5].discountRate !== 0 ? (
+                <div className={css.discountIconBox}>
+                  <img
+                    className={css.discountIcon}
+                    src="//cdn.ggumim.co.kr/storage/20211117191419RW6JS6bjRm.png"
+                    alt="할인북마크아이콘"
+                  />
+                  <span className={css.discountPrice}>
+                    {productLists[5].discountRate}
+                    <span className={css.percent}>%</span>
+                  </span>
+                </div>
+              ) : null}
+            </div>
+          </div> */}
+
+          {/* <div className={css.subPicture}  onClick={handleSearch07}>
+            <div className={!search07 ? css.subImageBox : css.subImageBoxPoint}>
+              <img
+                className={css.subImage}
+                src={productLists[6].imageUrl}
+                alt={productLists[6].productName}
+              />
+              {productLists[6].discountRate !== 0 ? (
+                <div className={css.discountIconBox}>
+                  <img
+                    className={css.discountIcon}
+                    src="//cdn.ggumim.co.kr/storage/20211117191419RW6JS6bjRm.png"
+                    alt="할인북마크아이콘"
+                  />
+                  <span className={css.discountPrice}>
+                    {productLists[6].discountRate}
+                    <span className={css.percent}>%</span>
+                  </span>
+                </div>
+              ) : null}
+            </div>
           </div> */}
         </div>
       </div>

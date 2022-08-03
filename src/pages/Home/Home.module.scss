@@ -13,10 +13,9 @@
   text-align: center;
   img {
     width: 32px;
-    height: 32px;
   }
   .toolTip {
-    z-index: 1000;
+    z-index: 100;
     display: flex;
     align-items: center;
     position: absolute;
@@ -64,6 +63,15 @@
           font-size: 16px;
           font-weight: bold;
           text-align: left;
+          .estimatedPrice {
+            color: #898f94;
+            margin-right: 4px;
+            line-height: 1.2em;
+            font-size: 13px;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+          }
           span {
             color: #ff585d;
             margin-right: 4px;
@@ -154,6 +162,10 @@
         top: 510.4px;
         left: 284.067px;
         @include search;
+        .select {
+          position: relative;
+          display: inline-block;
+        }
       }
       .tagFireplace {
         top: 460.8px;
@@ -191,13 +203,78 @@
         width: fit-content;
         height: fit-content;
         margin: 28px 6px;
-        .subImage {
+        .subImageBox {
           position: relative;
-          width: 106px;
-          height: 106px;
-          border-radius: 16px;
-          border: 0.5px solid #aaafb9;
-          user-select: none;
+          padding: 2px;
+          background: white;
+          .subImage {
+            width: 106px;
+            height: 106px;
+            border-radius: 16px;
+            border: 0.5px solid #aaafb9;
+          }
+          .discountIconBox {
+            position: absolute;
+            z-index: 100;
+            top: 2px;
+            right: 7px;
+            .discountIcon {
+              width: 24px;
+              height: 28px;
+            }
+            .discountPrice {
+              position: absolute;
+              z-index: 100;
+              right: 0px;
+              font-size: 11px;
+              font-weight: bold;
+              line-height: 25px;
+              color: white;
+              text-align: center;
+              padding-left: 1px;
+              .percent {
+                padding-right: 1px;
+                font-size: 5px;
+              }
+            }
+          }
+        }
+        .subImageBoxPoint {
+          position: relative;
+          background: linear-gradient(163.54deg, #ff659e 8.22%, #f56b30 94.1%);
+          padding: 2px;
+          border-radius: 18px;
+          .subImage {
+            width: 106px;
+            height: 106px;
+            border-radius: 16px;
+            border: 0.5px solid #aaafb9;
+          }
+          .discountIconBox {
+            position: absolute;
+            z-index: 100;
+            top: 2px;
+            right: 7px;
+            .discountIcon {
+              width: 24px;
+              height: 28px;
+            }
+            .discountPrice {
+              position: absolute;
+              z-index: 100;
+              right: 0px;
+              font-size: 11px;
+              font-weight: bold;
+              line-height: 25px;
+              color: white;
+              text-align: center;
+              padding-left: 1px;
+              .percent {
+                padding-right: 1px;
+                font-size: 5px;
+              }
+            }
+          }
         }
       }
     }
