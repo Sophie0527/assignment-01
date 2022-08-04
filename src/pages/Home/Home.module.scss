@@ -153,46 +153,13 @@
         width: 800px;
         cursor: pointer;
       }
-      .tagRug {
-        top: 777.6px;
-        left: 327.267px;
-        @include search;
-      }
-      .tagTable {
-        top: 510.4px;
-        left: 284.067px;
-        @include search;
-        .select {
-          position: relative;
-          display: inline-block;
-        }
-      }
-      .tagFireplace {
-        top: 460.8px;
-        left: 154.467px;
-        @include search;
-      }
-      .tagCurtain {
-        top: 240px;
-        left: 333.667px;
-        @include search;
-      }
-      .tagLamp {
-        top: 328px;
-        left: 720.867px;
-        @include search;
-      }
-      .tagTrolley {
-        top: 564.8px;
-        left: 444.034px;
-        @include search;
-      }
-      .tagMobile {
-        top: 275.2px;
-        left: 199.267px;
+      .buttonBox {
+        // top: 777.6px;
+        // left: 327.267px;
         @include search;
       }
     }
+
     .wrapVertical {
       overflow: scroll;
       overflow: auto;
