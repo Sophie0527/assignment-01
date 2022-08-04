@@ -26,6 +26,16 @@ function Home() {
   const [search06, setSearch06] = useState(false);
   const [search07, setSearch07] = useState(false);
 
+  // const handleSearch = () => {
+  //   if (productLists.indexOf(v => v.productId === 219762)) {
+  //     handleSearch01();
+  //   } else if (productLists.indexOf(v => v.productId === 83544)) {
+  //     handleSearch02();
+  //   } else {
+  //     handleSearch03();
+  //   }
+  // };
+
   const handleSearch01 = () => {
     setSearch01(!search01);
     if (search01 === true || search01 === false) {
@@ -379,14 +389,8 @@ function Home() {
         <div className={css.wrapVertical}>
           {/* {productLists?.map(productLists => {
             return (
-              <div
-                className={css.subPicture}
-                key={productLists.productId}
-                onClick={handleSearch01}
-              >
-                <div
-                  className={!search01 ? css.subImageBox : css.subImageBoxPoint}
-                >
+              <div className={css.subPicture} key={productLists.productId}>
+                <div className={css.subImageBox}>
                   <img
                     className={css.subImage}
                     src={productLists.imageUrl}
@@ -431,9 +435,9 @@ function Home() {
                 </div>
               ) : null}
             </div>
-          </div> */}
+          </div>
 
-          {/* <div className={css.subPicture} onClick={handleSearch02}>
+          <div className={css.subPicture} onClick={handleSearch02}>
             <div className={!search02 ? css.subImageBox : css.subImageBoxPoint}>
               <img
                 className={css.subImage}
@@ -454,9 +458,9 @@ function Home() {
                 </div>
               ) : null}
             </div>
-          </div> */}
+          </div>
 
-          {/* <div className={css.subPicture} onClick={handleSearch03}>
+          <div className={css.subPicture} onClick={handleSearch03}>
             <div className={!search03 ? css.subImageBox : css.subImageBoxPoint}>
               <img
                 className={css.subImage}
@@ -477,9 +481,9 @@ function Home() {
                 </div>
               ) : null}
             </div>
-          </div> */}
+          </div>
 
-          {/* <div className={css.subPicture} onClick={handleSearch04}>
+          <div className={css.subPicture} onClick={handleSearch04}>
             <div className={!search04 ? css.subImageBox : css.subImageBoxPoint}>
               <img
                 className={css.subImage}
@@ -500,9 +504,9 @@ function Home() {
                 </div>
               ) : null}
             </div>
-          </div> */}
+          </div>
 
-          {/* <div className={css.subPicture} onClick={handleSearch05}>
+          <div className={css.subPicture} onClick={handleSearch05}>
             <div className={!search05 ? css.subImageBox : css.subImageBoxPoint}>
               <img
                 className={css.subImage}
@@ -523,9 +527,9 @@ function Home() {
                 </div>
               ) : null}
             </div>
-          </div> */}
+          </div>
 
-          {/* <div className={css.subPicture} onClick={handleSearch06}>
+          <div className={css.subPicture} onClick={handleSearch06}>
             <div className={!search06 ? css.subImageBox : css.subImageBoxPoint}>
               <img
                 className={css.subImage}
@@ -546,9 +550,9 @@ function Home() {
                 </div>
               ) : null}
             </div>
-          </div> */}
+          </div>
 
-          {/* <div className={css.subPicture}  onClick={handleSearch07}>
+          <div className={css.subPicture} onClick={handleSearch07}>
             <div className={!search07 ? css.subImageBox : css.subImageBoxPoint}>
               <img
                 className={css.subImage}
