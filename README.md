@@ -5,7 +5,7 @@
   - 참고: [https://www.ggumim.co.kr/star/view/4582](https://www.ggumim.co.kr/star/view/4582)
 
 
-## Introduction
+## ✎ Introduction
 
 - 개발 기간 | 2022-08-01 ~ 2022-08-04
 - 개발 기능
@@ -30,11 +30,11 @@
 - 개발기능 시연 이미지
 ![assignment](https://github.com/Sophie0527/assignment-01/blob/main/public/images/assignment.gif?raw=true)
 
-## Technlogies
+## ✎ Technlogies
 
 - Front-end
   - HTML | SCSS | JAVASCRIPT | REACT | STYLED-COMPONENTS
   
-## Contact
+## ✎ Contact
 
 - ssh30510044@gmail.com, [기술블로그](https://sophie0527.tistory.com/), [깃허브](https://github.com/Sophie0527)
