@@ -37,4 +37,4 @@
   
 ## Contact
 
-- [ssh30510044@gmail.com](ssh30510044@gmail.com)
+- [ssh30510044@gmail.com], [기술블로그](https://sophie0527.tistory.com/), [깃허브](https://github.com/Sophie0527)
