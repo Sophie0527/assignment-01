@@ -1,8 +1,8 @@
 # 사진과 가구 조합 컴포넌트 구현
 
-## 집꾸미기 집소개 기능에 포함되어 있는 사진과 가구 정보를 조합하는 컴포넌트 구현하기
+- 집꾸미기 집소개 기능에 포함되어 있는 사진과 가구 정보를 조합하는 컴포넌트 구현하기
 
-참고: [https://www.ggumim.co.kr/star/view/4582](https://www.ggumim.co.kr/star/view/4582)
+  - 참고: [https://www.ggumim.co.kr/star/view/4582](https://www.ggumim.co.kr/star/view/4582)
 
 
 ## Introduction
@@ -27,8 +27,11 @@
         - 상품명 (product 정보 name)
         - 예상 가격 (product 정보 priceDiscount)
 
+- 개발기능 시연 이미지
+![assignment](https://github.com/Sophie0527/assignment-01/blob/main/public/images/assignment.gif?raw=true)
 
 ## Technlogies
 
 - Front-end
   - HTML | SCSS | JAVASCRIPT | REACT | STYLED-COMPONENTS
+  
