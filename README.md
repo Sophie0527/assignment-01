@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# 사진과 가구 조합 컴포넌트 구현
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 집꾸미기 집소개 기능에 포함되어 있는 사진과 가구 정보를 조합하는 컴포넌트 구현하기
 
-## Available Scripts
+참고: [https://www.ggumim.co.kr/star/view/4582](https://www.ggumim.co.kr/star/view/4582)
 
-In the project directory, you can run:
+<!-- ## 🎥 프로젝트 사이트 기능 구현 영상
 
-### `npm start`
+[Rush & code](https://www.youtube.com/watch?v=woZ2RcwbpXE) -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Introduction
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 개발 기간
+  - 개발 기간 | 2022-06-20 ~ 2022-06-31
+  - 개발 인원 | 총 4명
+- 프로젝트 선정 이유
+  - 2주라는 짧은 기간 안에 이루어지는 첫번째 프로젝트에 어울리는 기본에 충실한 웹 사이트인 LUSH를 선택하게 되었습니다. 지금까지 배웠던 기술들을 잘 녹여낼 수 있었던 프로젝트라 생각합니다.
 
-### `npm test`
+## 📪 레포지토리 주소
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Front-end-repo](https://github.com/wecode-bootcamp-korea/justcode-5-1st-rushandcode-front)
+- [Back-end-repo](https://github.com/wecode-bootcamp-korea/justcode-5-1st-rushandcode-back)
 
-### `npm run build`
+## 🗒 Notion 프로젝트 소개
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Rush & code 노션 페이지](https://www.notion.so/wecode/5-Rush-Code-e28f874f440d4ee8bad7e6d268b12772)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ⚙ DB modeling
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Rush & code db 자료 구조](https://dbdiagram.io/d/6299d08254ce263527530e12)
 
-### `npm run eject`
+## 💻 Technlogies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Front-end
+  - HTML | SCSS | JAVASCRIPT | REACT | STYLED-COMPONENTS
+- Back-end
+  - PRISMA | MYSQL | NODE.JS | POSTMAN | EXPRESS
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 👀 구현 기능
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🔸 Front-end 🔸
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### 정진우
 
-## Learn More
+- **`제품 상세`**
+  - 제품 상세 정보 가져오기 기능 구현
+  - 리뷰 추가, 수정, 삭제 기능 구현
+  - 장바구니 추가 기능 구현
+  - 내비게이션 바의 버튼 클릭 시 해당 위치로 스크롤 기능 구현
+- **`장바구니`**
+  - 장바구니 수정 기능 구현
+  - 장바구니 삭제 기능 구현
+  - 장바구니 전체 삭제 기능 구현
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 임상빈
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **`메인 페이지`**
+  - 메인 배너 : 무한 자동 재생 기능과 인덱스 버튼 클릭 시 해당 슬라이더로 이동 기능 구현
+  - 상품 리스트 배너 : DB에서 판매순으로 제품을 받아 배너 구현, 해당 배너 클릭 시 제품 상세페이지 연동
+  - 캐러셀(슬라이더) 배너 : prev/next 버튼 구현
+  - 이미지 Fixed 기능과 text scroll 이벤트를 추가하여 특정 구간에서 text 애니메이션 효과 구현
+  - keyframe 애니메이션으로 배너 구현
+- **`Footer`**
+  - footer에 video 태그를 이용하여 비디오 재생
 
-### Code Splitting
+#### 서수민
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **`제품 리스트`**
+  - 상품 클릭 시 Top Banner 이미지 / 텍스트 변경
+  - 상품 리스트 추천순/인기순/낮은 가격순/높은 가격순 정렬 기능 구현
+  - 상품 서브 카테고리 리스트 구현
+  - 카테고리 및 제품 상세 페이지와 연동
+- **`Navigation bar`**
+  - 내비게이션 바에 mouse hover 시, 상품 카테고리 리스트와 my page(로그인, 회원가입) 툴팁 창 기능 구현
+  - 상품 리스트와 연동
 
-### Analyzing the Bundle Size
+#### 손소희
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **`회원가입&로그인`**
+  - 로그인/회원가입 페이지 레이아웃
+  - Input 정보 오류 시 오류 별 메세지 알림 기능<br/>
+    ( 최소 글자 입력조건, 영문대/소문자, 숫자, 특수문자 중 2가지 이상 조합 등)
+  - 회원가입/로그인 버튼 클릭 시 조건에 맞다면 해당 화면으로 이동
+- **`이벤트`**
+  - 이벤트 페이지 레이아웃
+  - 이벤트 클릭 시 해당 이벤트 페이지로 이동
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 🔸 Back-end 🔸
 
-### Advanced Configuration
+#### 정진우
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **`상품 리스트 API`**
+  - 클라이언트의 요청에 맞춰 상품 리스트를 분류해서 보내주는 기능을 구현했습니다.
+  - 메인 카테고리에 따른 분류
+  - 서브 카테고리에 따른 분류
+  - 조건(판매 인기순, 높은 가격순, 낮은 가격순, 추천순)에 따른 정렬
+  - 쿼리문을 작성할 때 queryRaw를 사용했었는데 중복되는 부분이
+    너무 많아서 수정이 필요했고, queryRawUnsafe를 사용하여 문제를 해결했습니다.
 
-### Deployment
+#### 임상빈
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **`회원가입&로그인 API 및 에러 핸들러 미들웨어`**
+  - FE에서 회원가입에 필요한 User 정보를 req.body 값으로 보내주면 해당 값에 대하여 필수조건을 Validation 한 후 password 정보는 bcrypt를 통하여 암호화하여 user 정보를 DB에 저장한 후 성공 및 실패에 대한 메시지를 전송하는 기능을 구현
+  - FE에서 로그인 정보를 전달해주면 BE에서 해당 유저 정보를 crypt를 사용하여 데이터베이스에 있는 정보와 비교하여 일치하는 경우 JWT Token을 이용하여 토큰 생성 후 Response 해주는 기능을 구현
+  - BE 에러 핸들러 미들웨어 기능을 구현하여 어떤 레이어에 있든 에러 작업은 미들웨어를 통하여 핸들 할 수 있도록 구현
 
-### `npm run build` fails to minify
+#### 서수민
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **`리뷰 API`**
+  - 리뷰 작성/수정/삭제 API 구현
+
+#### 손소희
+
+- **`제품 상세 API`**
+  - 제품 상세 정보 전달 API 구현
+
+## Contact US
+
+- 정진우 [wlsdn0337@gmail.com](wlsdn0337@gmail.com)
+- 임상빈 [dlatkdqla@gmail.com](dlatkdqla@gmail.com)
+- 서수민 [ssm39825@gmail.com](ssm39825@gmail.com)
+- 손소희 [ssh30510044@gmail.com](ssh30510044@gmail.com)
