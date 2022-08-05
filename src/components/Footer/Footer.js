@@ -1,11 +1,7 @@
 import React from 'react';
 import css from './Footer.module.scss';
-// import { Link } from 'react-router-dom';
 
 function Footer() {
-  //   const alert = e => {
-  //     alert('dkff');
-  //   };
   return (
     <div className={css.container}>
       <div className={css.owner}>
