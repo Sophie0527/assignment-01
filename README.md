@@ -35,3 +35,6 @@
 - Front-end
   - HTML | SCSS | JAVASCRIPT | REACT | STYLED-COMPONENTS
   
+## Contact
+
+- [ssh30510044@gmail.com](ssh30510044@gmail.com)
